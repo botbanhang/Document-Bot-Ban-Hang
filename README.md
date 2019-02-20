@@ -19,6 +19,7 @@
 ```
 - Nhúng trực tiếp vào tag head trong html
 - Các mã SDK được nhúng trực tiếp vào tag `script` để sử dụng
+- Example video: https://youtu.be/Y-sJjKrH2Kg
 ## SDK DOCUMENT
 
 ### 1. CATEGORY
