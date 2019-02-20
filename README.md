@@ -8,7 +8,7 @@
 - Tạo ứng dụng
 - Kích hoạt
 - Trong ứng dụng vừa tạo sẽ có mã nhúng dạng như sau:
-```
+```html
 <script src="https://media.botbanhang.vn/libs/api.min.js"></script>
 <script>
   var BotBanHang = BotBanHang.init({
@@ -23,7 +23,7 @@
 
 ### 1. CATEGORY
 - Truy vấn toàn bộ thông tin danh mục, bao gồm danh mục cha và các danh mục con
-```
+```javascript
 BotBanHang.category.getCategory()
 ```
 - Response Example:
@@ -100,11 +100,11 @@ BotBanHang.category.getCategory()
 
 ### 2. PRODUCT 
 - Truy vấn toàn bộ danh sách sản phẩm
-```
+```javascript
 BotBanHang.category.getProduct({})
 ```
 - Response Example:
-```
+```javascript
 {
   "data": [
     {
@@ -141,15 +141,15 @@ BotBanHang.category.getProduct({})
 }
 ```
 - Truy vấn tìm kiếm một sản phẩm dựa trên `ID`
-```
+```javascript
 BotBanHang.category.getProduct({id: "id_san_pham"})
 ```
 - Request Example:
-```
+```javascript
 BotBanHang.category.getProduct({id: "5c6b8909c1e29de60e15f72f"})
 ```
 - Response Example:
-```
+```javascript
 {
   "data": [
     {
@@ -183,7 +183,7 @@ BotBanHang.category.getProduct({id: "5c6b8909c1e29de60e15f72f"})
 }
 ```
 - Truy vấn danh sách sản phẩm theo danh mục, có tìm kiếm và phân trang
-```
+```javascript
 BotBanHang.category.getListProduct({
       parent: "id_danh_muc", 
       limit: "gioi_han_ban_ghi", // number
@@ -192,7 +192,7 @@ BotBanHang.category.getListProduct({
     })
 ```
 - Request Example:
-```
+```javascript
 BotBanHang.category.getListProduct({
       parent: "5c6adf5051fc690848bd09da",
       limit: "20",
@@ -201,7 +201,7 @@ BotBanHang.category.getListProduct({
     })
 ```
 - Response Example:
-```
+```javascript
 {
   "data": [
     {
@@ -236,11 +236,11 @@ BotBanHang.category.getListProduct({
 ```
 ### 3. ME
 - Truy vấn thông tin người đang truy cập
-```
+```javascript
 BotBanHang.user.me()
 ```
 - Response Example:
-```
+```javascript
 {
   "data": {
     "id": "5c072e5fe503e8855fd52e47", // ID của người truy cập
@@ -255,11 +255,11 @@ BotBanHang.user.me()
 ```
 ### 4. CONTACTS
 - Truy vấn thông tin liên hệ của người đang truy cập
-```
+```javascript
 BotBanHang.user.getContacts()
 ```
 - Response Example:
-```
+```javascript
 {
   "data": [
     {
@@ -281,7 +281,7 @@ BotBanHang.user.getContacts()
 }
 ```
 - Thêm thông tin liên hệ của người đang truy cập
-```
+```javascript
 BotBanHang.user.addContact({
   name: "ten",
   email:"dia_chi_mail",
@@ -292,7 +292,7 @@ BotBanHang.user.addContact({
   })
 ```
 - Request Example:
-```
+```javascript
 BotBanHang.user.addContact({
       name: "Minh Thien",
       email: "adfd@gmail.com",
@@ -303,7 +303,7 @@ BotBanHang.user.addContact({
     })
 ```    
 - Response Example:
-```
+```javascript
 {
   "data": [
     {
@@ -322,15 +322,15 @@ BotBanHang.user.addContact({
 }
 ```
 - Xóa thông tin liên hệ của người đang truy cập
-```
+```javascript
 BotBanHang.user.removeContact(id: "id riêng của địa chỉ")
 ```
 - Request Example:
-```
+```javascript
 BotBanHang.user.removeContact("5c6bb4996b255bae66a88e61")
 ```
 - Response Example:
-```
+```javascript
 {
   "data": [
     {
@@ -350,24 +350,24 @@ BotBanHang.user.removeContact("5c6bb4996b255bae66a88e61")
 ```
 ### 5. FLOW
 - Gửi một kịch bản cho người đang truy cập
-```
+```javascript
 BotBanHang.user.activeFlow({flow: "id_cua_kich_ban"})
 ```
 - Request Example:
-```
+```javascript
 BotBanHang.user.activeFlow({flow: "5c072d9ee503e8855fd52c2c"})
 ```
 - Response Example:
-```
+```javascript
 {"data":{"success":true}}
 ```
 ### 6. PROVINCE
 - Truy vấn danh sách mã tỉnh
-```
+```javascript
 BotBanHang.geo.getProvince()
 ```
 - Response Example:
-```
+```javascript
 {
   "data": [
     {
@@ -392,15 +392,15 @@ BotBanHang.geo.getProvince()
 ```
 ### 7. DISTRICT
 - Truy vấn danh sách mã thành phố dựa trên mã tỉnh
-```
+```javascript
 BotBanHang.geo.getDistrict(ma_tinh)
 ```
 - Request Example:
-```
+```javascript
 BotBanHang.geo.getDistrict(10)
 ```
 - Response Example:
-```
+```javascript
 {
   "data": [
     {
@@ -431,11 +431,11 @@ BotBanHang.geo.getDistrict(10)
 ```
 ### 8. PAGE
 - Truy vấn thông tin page
-```
+```javascript
 BotBanHang.page.getPage()
 ```
 - Response Example:
-```
+```javascript
 {
   "data": {
     "id": "5c0729df6f92d42919aff017",
@@ -510,11 +510,11 @@ BotBanHang.page.getPage()
 ```
 ### 9. CART
 - Truy vấn các sản phẩm trong giỏ hàng
-```
+```javascript
 BotBanHang.order.getCart()
 ```
 - Response Example:
-```
+```javascript
 {
   "data": {
     "id": "5c6bb2216b255bae66a88d29",
@@ -542,11 +542,11 @@ BotBanHang.order.getCart()
 }
 ```
 - Cập nhật lại thông tin trong giỏ hàng
-```
+```javascript
 BotBanHang.order.updateCart({orders})
 ```
 - Request Example:
-```
+```javascript
 BotBanHang.order.updateCart({
       orders: [
         {
@@ -566,7 +566,7 @@ BotBanHang.order.updateCart({
     })
 ```
 - Response Example:
-```
+```javascript
 {
   "data": {
     "id": "5c6bbee462bfdde966ed42d7",
@@ -594,11 +594,11 @@ BotBanHang.order.updateCart({
 }
 ```
 - Thưc hiện hành động đặt hàng (Checkout)
-```
+```javascript
 BotBanHang.order.checkout({order, contact, name_ship, tel_ship, address_ship, province_ship, district_ship, email, note})
 ```
 - Request Example:
-```
+```javascript
 BotBanHang.order.checkout({
       order: {id: "5c6c2c5c62bfdde966ed83fb"}, // ID của giỏ hàng
       contact: "5c6baf716b255bae66a88bc1", // ID thông tin người mua
@@ -612,6 +612,6 @@ BotBanHang.order.checkout({
     })
 ```
 - Response Example:
-```
+```javascript
 {"data":{}}
 ```
