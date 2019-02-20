@@ -1,7 +1,7 @@
 # Document BBH SDK
 
 
-### Thiết lập
+### Khởi tạo
 - Truy cập https://botbanhang.vn/page để đăng nhập
 - Chọn page
 - Chọn Web Application. (Liên hệ Bot Bán Hàng tại https://m.me/botbanhang để được kích hoạt)
