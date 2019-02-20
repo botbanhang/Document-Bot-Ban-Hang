@@ -2,17 +2,17 @@
 
 
 ### Thiết lập
-- Truy cập botbanhang.vn/page để đăng nhập
+- Truy cập https://botbanhang.vn/page để đăng nhập
 - Chọn page
 - Chọn Web Application. (Liên hệ Bot Bán Hàng tại https://m.me/botbanhang để được kích hoạt)
 - Tạo ứng dụng
 - Kích hoạt
-- Trong ứng dụng vừa tạo sẽ có mã nhúng dạng
+- Trong ứng dụng vừa tạo sẽ có mã nhúng dạng như sau:
 ```
 <script src="https://media.botbanhang.vn/libs/api.min.js"></script>
 <script>
   var BotBanHang = BotBanHang.init({
-    app_id: "225739c0-339b-11e9-9b37-637e136097a8",
+    app_id: "225739c0-339b-11e9-9b37-xxxxxxxx",
     version: "v1.3"
   })
 </script>
@@ -27,7 +27,7 @@
 BotBanHang.category.getCategory()
 ```
 - Response Example:
-```
+```javascript
 {
   "data": [
     {
