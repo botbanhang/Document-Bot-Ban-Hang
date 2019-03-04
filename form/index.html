@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Form gửi kịch bản</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+    .container {
+      padding-top: 10rem;
+      min-height: 50rem;
+      background-image: linear-gradient(#F0F2F0, #000C40);
+    }
+
+    .col-12 {
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-12">
+        <h5>Gửi kich bản trải nhiệm tính năng bot</h5>
+        <button onclick="guiKichBanMot()" type="button" class="btn btn-info">Gửi kịch bản</button>
+      </div>
+      <div class="col-12">
+        <h5>Gửi kich bản hướng dẫn mua sản phẩm</h5>
+        <button onclick="guiKichBanHai()" type="button" class="btn btn-info">Gửi kịch bản</button>
+      </div>
+      <div class="col-12">
+        <h5>Gửi kich bản hướng dẫn quét mã QR</h5>
+        <button onclick="guiKichBanBa()" type="button" class="btn btn-info">Gửi kịch bản</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://media.botbanhang.vn/libs/api.min.js"></script>
+  <script>
+    var BotBanHang = BotBanHang.init({
+      app_id: "4c53a990-3583-11e9-8083-6569d49996d1",
+      version: "v1.3"
+    })
+
+    async function guiKichBanMot() {
+      var kq = await BotBanHang.user.activeFlow({ flow: "5c7b77887bce6d001244ec95" })
+      if (kq.success == true)
+        alert("Đã gửi kịch bản")
+      else
+        alert("Gửi kịch bản không thành công")
+    }
+    async function guiKichBanHai() {
+      var kq = await BotBanHang.user.activeFlow({ flow: "5c7b77887bce6d001244ec96" })
+      if (kq.success == true)
+        alert("Đã gửi kịch bản")
+      else
+        alert("Gửi kịch bản không thành công")
+    }
+    async function guiKichBanBa() {
+      var kq = await BotBanHang.user.activeFlow({ flow: "5c7b77887bce6d001244ec98" })
+      if (kq.success == true)
+        alert("Đã gửi kịch bản")
+      else
+        alert("Gửi kịch bản không thành công")
+    }
+
+  </script>
+</body>
+
+</html>
