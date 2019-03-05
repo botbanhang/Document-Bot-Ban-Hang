@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   res.json({'status':'ok'})
 })
 app.post('/', (req, res) => {
-  console.log('post:::',req.body)
+  console.log('post:::::',req.body)
   res.json({'status':'ok'})
 })
 
