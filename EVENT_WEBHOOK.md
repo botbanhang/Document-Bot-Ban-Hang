@@ -2,7 +2,7 @@
 ## Khách hàng mới
 - Trả về thông tin khách hàng mới tương tác với page(bấm vào nút bắt đầu)
 - Response example
-```json
+```javascript
   { 
     "event": "client:new", //event name
     "data": {
@@ -18,7 +18,7 @@
 ## Đơn hàng mới
 - Trả về thông tin đơn hàng mới được tạo
 - Response example
-```json
+```javascript
   { 
     "event": "order:new",  // envent name 
     "data": { 
@@ -59,7 +59,7 @@
 ## Sản phẩm mới
 - Trả về thông tin sản phẩm mới được tạo ra
 - Response example 
-```json
+```javascript
   { 
     "event": "category:new", // event name 
     "data": { 
@@ -72,7 +72,7 @@
 ## Danh mục mới
 - Trả về thông tin danh mục mới được tạo ra
 - Response example 
-```json
+```javascript
   { 
     "event": "category:new", // event name 
     "data": { 
@@ -85,7 +85,7 @@
 ## Cập nhật sản phẩm
 - Trả về thông tin sản phẩm mới được cập nhật
 - Response example
-```json
+```javascript
   { 
     "event": "category:update", // event name
     "data": { 
@@ -98,7 +98,7 @@
 ## Cập nhật danh mục
 - Trả về thông tin danh mục mới được cập nhật
 - Response example
-```json
+```javascript
   { 
     "event": "category:update", // event name
     "data": { 
@@ -111,7 +111,7 @@
 ## Xoá sản phẩm
 - Trả về thông tin sản phẩm bị xóa
 - Response example
-```json
+```javascript
   { 
     "event": "category:remove", // event name
     "data": { 
@@ -124,7 +124,7 @@
 ## Xoá danh mục
 - Trả về thông tin danh mục bị xóa
 - Response example
-```json
+```javascript
   { 
     "event": "category:remove", // event name
     "data": { 
@@ -137,7 +137,7 @@
 ## Kích hoạt thu hút
 - Trả về thông tin thu hút khách hàng(backlink) được kích hoạt
 - Response example
-```json
+```javascript
   { 
     "event": "backlink:active", // event name
     "data": { 
