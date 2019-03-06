@@ -20,6 +20,8 @@
 - Nhúng trực tiếp vào tag head trong html
 - Các mã SDK được nhúng trực tiếp vào tag `script` để sử dụng
 - Example video: https://youtu.be/Y-sJjKrH2Kg
+- Exapmle shopping_cart: http://m.me/2204445623215564?ref=8C1kTrp0X
+- Example form: http://m.me/2204445623215564?ref=CF0TSvB_N
 ## SDK DOCUMENT
 
 ### 1. CATEGORY
