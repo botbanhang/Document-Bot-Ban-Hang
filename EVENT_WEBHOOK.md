@@ -14,7 +14,7 @@
   }
 ```
 ## Cập nhật khách hàng
-- On development
+- In development
 ## Đơn hàng mới
 - Trả về thông tin đơn hàng mới được tạo
 - Response example
